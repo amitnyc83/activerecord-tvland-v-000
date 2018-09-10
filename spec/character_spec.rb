@@ -26,7 +26,6 @@ describe Character do
     #are free to add methods that perform actions on the model's data
 
     urkel = Character.new(:name => "Steve Urkel")
-    binding.pry
     urkel.catchphrase = "Did I do that?"
     urkel.save
     expect(Character.find_by(:id => urkel.id).catchphrase).to eq(urkel.catchphrase)
